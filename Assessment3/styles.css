@@ -46,6 +46,17 @@ header h2 {
     flex: 3;
     margin-right: 5vw;
 }
+.books {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    max-width: 100%;
+}
+.books figure {
+    max-width: 34vw;
+}
+.books img {
+    max-width: 100%;
+}
 article h3 {
     margin-top: 0;
     margin-bottom: 3vh;
