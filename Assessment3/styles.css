@@ -1,0 +1,91 @@
+/* universal rules */
+nav, #wrapper{
+    margin-top: 8vh;
+}
+
+/* per tag */
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-around;
+}
+nav {
+    margin-left: 5vw;
+    float: left;
+    flex: 1;
+}
+nav a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+    font-size: 21px;
+}
+nav a:hover{
+    color: dimgray;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: right;
+}
+header img{
+    max-width: 100%;
+}
+header h1 {
+    font-size: 34px;
+    font-weight: bolder;
+}
+header h2 {
+    margin-top: 0;
+    margin-bottom: 3vh;
+    font-size: 20px;
+    color: dimgray;
+}
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    margin-right: 5vw;
+}
+.books {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    max-width: 100%;
+}
+/* .books > div {
+    text-align: center;
+    padding: 2vh 2vw;
+} */
+.books img {
+    display: block;
+    max-width: 100%;
+}
+.books figure {
+    margin: 1vh 1.3vw;
+}
+.books figcaption {
+    size: 1.1em;
+}
+section{
+    margin-bottom: 3vh;
+    /* text-align: justify; */
+    text-align: center;
+}
+article h3 {
+    margin-top: 0;
+    margin-bottom: 3vh;
+    font-size: 20px;
+    color: dimgray;
+}
+article p:last-child{
+    margin-bottom: 3vh;
+}
+footer{
+    font-size: 10px;
+    font-weight: lighter;
+    font-size: italic;
+    text-align: right;
+    margin-top: 10vh;
+}
