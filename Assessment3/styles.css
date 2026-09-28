@@ -21,6 +21,9 @@ nav a {
     font-weight: bold;
     font-size: 21px;
 }
+nav a:hover{
+    color: dimgray;
+}
 header{
     display: flex;
     flex-direction: column;
@@ -51,11 +54,24 @@ header h2 {
     grid-template-columns: auto auto auto;
     max-width: 100%;
 }
-.books figure {
-    max-width: 34vw;
-}
+/* .books > div {
+    text-align: center;
+    padding: 2vh 2vw;
+} */
 .books img {
+    display: block;
     max-width: 100%;
+}
+.books figure {
+    margin: 1vh 1.3vw;
+}
+.books figcaption {
+    size: 1.1em;
+}
+section{
+    margin-bottom: 3vh;
+    /* text-align: justify; */
+    text-align: center;
 }
 article h3 {
     margin-top: 0;
@@ -63,10 +79,13 @@ article h3 {
     font-size: 20px;
     color: dimgray;
 }
+article p:last-child{
+    margin-bottom: 3vh;
+}
 footer{
     font-size: 10px;
     font-weight: lighter;
     font-size: italic;
     text-align: right;
-    margin-top: 3vh;
+    margin-top: 10vh;
 }
