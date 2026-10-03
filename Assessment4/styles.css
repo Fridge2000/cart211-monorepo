@@ -117,4 +117,7 @@ footer{
     footer{
         margin: 0;
     }
+    .books {
+        grid-template-columns: auto auto;
+    }
 }
