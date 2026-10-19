@@ -60,8 +60,44 @@
     <p>Look at this creature</p>
 
     <!-- size control buttons -->
-     <div class="size-controls">
+    <div class="size-controls">
+        <!-- Tells visitors what the buttons controls  -->
+        <strong>Video Size: </strong>
 
-     </div>
+        <!-- when clicked, calls the javascript function and changes the video with to 320px -->
+        <button onclick="changeSize('small')">Small</button>
+
+        <!-- Change width to 480px -->
+        <button onclick="changeSize('medium')">Medium</button>
+
+        <!-- Change width to 720px -->
+        <button onclick="changeSize('large')">Large</button>
+
+        <!-- Change width to available content width -->
+        <button onclick="changeSize('full')">Full</button>
+
+    </div>
+
+    <!-- VIDEO PLAYER -->
+    <!-- id="myVideo" gives the video a unique name that JS can select -->
+    <!-- class="full" makes the video start at full width -->
+    <!-- controls displays the built-in play, pause, volume and other controls -->
+    <video id="myVideo" class="full" controls>
+        <source src="cat-nap.mp4" type="video/mp4">
+        Sorry, your browser cannot play this video. Try on Firefox or Chrome.
+    </video>
+    
+    <!-- JAVASCRIPT: CHANGE VIDEO SIZE -->
+    <script>
+        // this function runs whenever a size button is clicked
+        // the word "size" receives the value from the button
+        // such as "small", "medium", "large" or "full"
+        function changeSize(size){
+            // get the video with getElementById
+            const myVideo = document.getElementById('myVideo');
+            // mods the class
+            myVideo.className = size;
+        }
+    </script>
 </body>
 </html>
