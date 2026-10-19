@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Video More</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif; 
+            margin: 20px;
+        }
+        /* VIDEO SIZE BUTTONS */
+        /* Add space below the group of buttons */
+        .size-controls {
+            margin-bottom: 15px;
+        }
+
+        /* Style all buttons inside the size-controls sections */
+        .size-controls button {
+            /* add space inside each button */
+            padding: 8px 14px;
+            /* add space between buttons */
+            margin: 3px;
+            /* change cursor shape to a hand */
+            cursor: pointer;
+        }
+
+        /* VIDEO SIZE CONTROl */
+
+        /* Applies these style to the video player */
+        /* mostly related to size */
+        video {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            aspect-ratio: 16 / 9;
+            height: auto;
+            
+            /* Makes changes in the video appear smoothly */
+            transition: width 0.3s ease;
+        }
+
+        /* DIFFERENT VIDEO SIZES */
+        video.small {
+            width: 320px;
+        }
+        video.medium {
+            width: 480px;
+        }
+        video.large {
+            width: 720px;
+        }
+        video.full {
+            width: 100%
+        }
+    </style>
+</head>
+<body>
+    <h1>Cat Video</h1>
+    <p>Look at this creature</p>
+</body>
+</html>
