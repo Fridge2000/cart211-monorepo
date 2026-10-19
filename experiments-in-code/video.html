@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Video</title>
+    <style>
+        body{
+            font-family: sans-serif;
+            margin:20px;
+        }
+        /* Style the video player */
+        video{
+            /* places video on its own line */
+            display: block; 
+
+            /* makes the video fill the available space */
+            width: 100%;
+
+            /* sets standard widescreen ratio */
+            aspect-ratio: 16 / 9;
+ 
+            /* Allows the browser to calculate height */
+            height: auto;
+
+            /* Display a black background */
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cat Video</h1>
+    <p>Watch this cat take a nap</p>
+    <!-- `controls` adds built-in playback control -->
+    <video controls loop>
+        <!-- loads mp4 video file from same folder as this html file -->
+        <source src="cat-nap.mp4" type="video/mp4">
+
+        <!-- Fallback message -->
+        Sorry, your browser cannot play this video. Try on Firefox or Chrome.
+    </video>
+</body>
+</html>
