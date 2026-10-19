@@ -82,7 +82,7 @@
     <!-- id="myVideo" gives the video a unique name that JS can select -->
     <!-- class="full" makes the video start at full width -->
     <!-- controls displays the built-in play, pause, volume and other controls -->
-    <video id="myVideo" class="full" controls>
+    <video id="myVideo" class="full" controls loop>
         <source src="cat-nap.mp4" type="video/mp4">
         Sorry, your browser cannot play this video. Try on Firefox or Chrome.
     </video>
@@ -96,7 +96,14 @@
             // get the video with getElementById
             const myVideo = document.getElementById('myVideo');
             // mods the class
-            myVideo.className = size;
+            // myVideo.className = size;
+
+            // cleans class list
+            // avoids previous class from being active
+            myVideo.classList = [];
+
+            // updates video to new size by modding class
+            myVideo.classList.add(size);
         }
     </script>
 </body>
