@@ -261,3 +261,66 @@ footer a {
 }
 
 /* END OF THE DESKTOP IMAGE GRID */
+
+/* SOCIAL MEDIA LINKS */
+.social a {
+    color: gray;
+    font-size: 30px;
+}
+
+.social a:hover{
+    color: lightgray;
+    font-size: 30px;
+}
+
+.social p {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    color: gray;
+    text-align: center;
+    /* Use 80% of the inherited font size */
+    font-size: 0.8em;
+}
+
+/* SOCIAL ICON CONTAINER */
+.social {
+    display: flex;
+    /* Stack the children vertically  */
+    flex-direction: column;
+    /* Center the children horizontally */
+    align-items: center;
+    text-align: center;
+    /* 20 vertical, 0 horizontal */
+    padding: 20px 0px;
+}
+
+.social .fa {
+    font-size: 3em;
+    padding: 8px;
+    color: gray;
+}
+
+/* ICON ROW AND HOVER EFFECTS */
+.icons-wrapper {
+    /* arrange icons in a row */
+    display: flex;
+    justify-content: center;
+    /* allows the icons to move to another line when needed */
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+}
+
+.fa {
+    font-size: 6em;
+}
+
+.fa:hover {
+    color: lightgray;
+}
+
+.credits {
+    margin-top: 10px;
+    font-size: 1em;
+    width: 100%;
+}
