@@ -72,6 +72,173 @@
 
 
 <body>
-    
+    <!-- Everything inside the body is part of the visible webpage. -->
+
+    <!-- Main wrapper: groups the page content together. -->
+    <!-- CSS uses #wrapper to control the overall width and centre the content. -->
+    <div id="wrapper">
+
+        <!-- HEADER: contains the logo and navigation menu. -->
+        <header>
+
+            <!-- NAV: contains links that help visitors move around the website. -->
+            <nav>
+
+                <!-- Logo: clicking the image takes the visitor to the linked page. -->
+                <div class="logo">
+                    <a href="#">
+                        <!-- The alt attribute describes the image for screen readers. -->
+                        <img src="assets/logo.png" alt="Logo" width="110" height="50">
+                    </a>
+                </div>
+
+                <!-- Navigation links.
+                     CSS displays these horizontally on desktop
+                     and as a menu panel on smaller screens. -->
+                <div class="menu1">
+
+                    <!-- The X button closes the mobile navigation menu. -->
+                    <button type="button" class="close-menu" aria-label="Close navigation menu">
+                        &times;
+                    </button>
+
+                    <!-- Links to other pages of the website. -->
+                    <a href="storie1.html" class="menuI">STORIES</a>
+
+                    <!-- This link currently points to the top of the current page. -->
+                    <a href="#" class="menuI">SERIES</a>
+
+                    <!-- The active class can be styled differently in the CSS. -->
+                    <a href="index.html" class="menuI_active">ABOUT</a>
+
+                </div>
+
+                <!-- Hamburger button: displayed on mobile and tablet screens. -->
+                <div class="hamburger-menu">
+
+                    <button type="button" aria-label="Open navigation menu">
+                        <!-- Font Awesome displays the three horizontal menu lines. -->
+                        <span class="fa fa-bars" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+        <section>
+            <article>
+                <h1>Humans of New York</h1>
+                <h2 class="stories_title">America Pageant</h2>
+                <div class="pict">
+                    <figure class="left_stories">
+                        <img src="assets/america_pageant.jpg" width="1200px" height="790px" class="im">
+                    </figure>
+                    <div class="stories">
+                        <p>
+                            “I was seventeen. Only child, not a lot of friends. But I had a plan. I was going to become an actress, get a role on All My Children, meet my husband on set - and when that was all over, I’d host a talk show. Kelly Ripa did it; I could do it too. Back then it seemed like every woman on television had gotten their start as beauty queen. So my senior year I decided to enter my school’s Homecoming Queen competition. It was organized like a Ms. America pageant. But this was a rough high school, only one other girl signed up, so I had a good shot. My whole family got behind me. My mom was a seamstress. We noticed that in most pageants we watched, the winner wore a white dress. So she sewed me a white dress that I picked out of Seventeen Magazine. First came the interview portion, and that’s when the trouble started. The judges asked me about the Anita Hill testimony; I wasn’t ready for that. I was ready for world peace. They were supposed to ask me about my goals, so I could say world peace. But that didn’t happen. The talent portion was later that night at the homecoming dance. The whole school was there. I chose a Sheena Easton song; poor choice. Not the right crowd for that. The other girl chose ‘I Feel Good’ by Stephanie Mills, and she had the whole crowd singing along. That’s when I knew it was over. But then, a miracle. The guidance counselor quieted everyone down, and announced the winner: it was me. Me! It was my Kelly Kapowski moment. Everyone was cheering, the other girl congratulated me. But it only lasted five seconds, because the guidance counselor said: ‘Wait a second, I’m sorry. Joanna is the runner-up.’ It was the worst moment of my life. In fact, the only thing that got me through COVID was knowing that it could not possibly, possibly be worse than that moment. And here’s a twist for you. Remember that guidance counselor? Several years later I ended up acting alongside his son in a play at Queens College. In one scene I pulled a gun on him, and the director was like: ‘We need more anger. Think about something that makes you angry.’ I was like: ‘Well, that’s easy. His father ruined my senior year. And quite possibly, my entire life.”
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <footer>
+
+            <!-- Groups the social icons and credits together. -->
+        <section class="social-section">
+
+            <div class="social-icons">
+
+                <a href="https://facebook.com"
+                class="social facebook"
+                aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="https://instagram.com"
+                class="social instagram"
+                aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="https://x.com"
+                class="social twitter"
+                aria-label="X">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+                <a href="https://tiktok.com"
+                class="social tiktok"
+                aria-label="TikTok">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+
+                <a href="https://youtube.com"
+                class="social youtube"
+                aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+
+                <a href="https://linkedin.com"
+                class="social linkedin"
+                aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="https://github.com"
+                class="social github"
+                aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+            </div>
+            </section>
+                    <!-- Credits identify the course project and source material. -->
+                <div class="credits">
+                    <p>
+                        © Shuyuan Yin, cart 211, fall 2026, assessment 5,
+                        credits: humansofnyarchive.com
+                    </p>
+                </div>
+
+            </div>
+            <!-- End of social section. -->
+
+        </footer>
+    </div>
+    <script>
+
+        // Wait until the HTML document has finished loading.
+        // This ensures the buttons exist before JavaScript tries to select them.
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Find the hamburger button inside the mobile menu container.
+            const hamburgerButton =
+                document.querySelector('.hamburger-menu button');
+
+            // Find the X button used to close the navigation menu.
+            const closeButton =
+                document.querySelector('.close-menu');
+
+            // Find the container holding the navigation links.
+            const menu1 =
+                document.querySelector('.menu1');
+
+
+            // When the hamburger button is clicked,
+            // add the class "menu-deployed" to the navigation menu.
+            // The CSS uses this class to make the menu visible.
+            hamburgerButton.addEventListener('click', () => {
+                menu1.classList.add('menu-deployed');
+            });
+
+
+            // When the X button is clicked,
+            // remove "menu-deployed" so the menu closes.
+            closeButton.addEventListener('click', () => {
+                menu1.classList.remove('menu-deployed');
+            });
+
+        });
+
+    </script>
+    <!-- End of JavaScript. -->
 </body>
 </html>
