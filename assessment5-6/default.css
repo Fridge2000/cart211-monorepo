@@ -384,3 +384,194 @@ footer a {
     font-size: 1em;
     width: 100%;
 }
+
+/* RESPONSIVE DESIGN */
+
+/* Apply these styles when the screen is 1024px wide or less */
+@media (max-width: 1024px) {
+    /* Show the Hamburger menu on smaller screens */
+    .hamburger-menu {
+        display: flex;
+        align-items: center;
+    }
+    /* Set mobile menu link colors and decorations */
+    .menu1 a, .menu a:hover {
+        text-decoration: none;
+        color: gray;
+        background-color: transparent;
+    }
+    /* Hide the menu until it is opened */
+    .menu1 {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* place menu above most page content */
+        z-index: 1000;
+    }
+
+    /* Make each mobile menu link easier to tap */
+    .menu1 a {
+        padding: 20px;
+    }
+
+    /* display close menu button */
+    .close-menu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 2em;
+        color: gray;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    /* Apply this class when mobile menu is opened */
+    .menu-deployed {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        /* vh fills the viewport height */
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: white;
+        z-index: 1000;
+        padding-top: 50px;
+    }
+    /* Highlight the active menu link */
+    .menu1_active {
+        color: black;
+    }
+    /* removes any grid-column place from the hamburger */
+    .hamburger-menu {
+        grid-column: auto;
+    }
+    button {
+        border-width: 0px;
+        background-color: white;
+    }
+    /* Redesign the nav bar from mobile screens */
+    nav {
+        margin: 0 auto;
+        margin-bottom: 50px;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px 20px;
+        line-height: 30px;
+        position: relative;
+        display: flex;
+        /* separate the navigation items horizontally */
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        /* adds black bottom border */
+        border-bottom: 4px solid black;
+        background: black;
+        z-index: 1000;
+        color: white;
+    }
+    h1 {
+        margin-top: 50px;
+    }
+    nav a {
+        color: white;
+    }
+    /* MOBILE CONTENT WRAPPER */
+    #wrapper {
+        margin-top: 500px;
+        position: relative;
+        width: 90%;
+        /* Center the wrapper and reset its top margin to zero */
+        margin: 0 auto;
+        /* Prevent the wrapper from floating to one side */
+        float: none;
+    }
+
+    footer {
+        margin-top: 40px;
+        font-size: 12px;
+    }
+
+    /* TWO COLUMN MOBILE IMAGE GRID */
+    .pict {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+
+        margin: 0;
+        padding: 0;
+
+        grid-auto-flow: row;
+        align-items: start;
+    }
+
+    /* 
+        Restrain desktop positioning and constrain each grid item.
+        The special character ^ is called a caret. In CSS, when used inside
+        an attribute selector, it means "starts with" 
+        .active^= - means the attribute must start with the specified text
+    */
+    .pict figure, 
+    .pict [class^="im"]{
+        grid-column: auto;
+        grid-row: auto;
+
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Make images fit inside of their columns */
+    .pict img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        box-sizing: border-box;
+    }
+
+    /* Prevent our hover effects from creating horizontal overflow */
+    .pict figure:hover img,
+    .pict .im:hover {
+        transform: none;
+    }
+
+    /* Keep hover text inside the image */
+    .pict .hover-text {
+        max-width: calc(100% - 20px);
+        box-sizing: border-box;
+        white-space: normal;
+    }
+
+    /* Apply only on smaller screens */
+    @media (max-width: 600px){
+        .pict {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 5px;
+        }
+    }
+
+    
+}
